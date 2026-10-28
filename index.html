@@ -1,131 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NextGen Poultry Farm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="#home" aria-label="NextGen Poultry Farm home">
-        <span class="brand-icon">🐔</span>
-        <span>NextGen Poultry</span>
-      </a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a class="nav-cta" href="#contact">Order Now</a>
-    </nav>
-  </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NextGen Ornamental Farm — Premium ornamental birds and show-quality breeding stock. Selective genetics, health-tested, shipped across East Africa.">
+  <meta name="author" content="Ong'era Mohammed">
+  <title>NextGen Ornamental Farm | Premium Ornamental Birds</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230F0F0F'/%3E%3Cpath d='M30 65 Q50 25 70 65' fill='none' stroke='%23D4AF37' stroke-width='8'/%3E%3Ccircle cx='50' cy='55' r='8' fill='%23D4AF37'/%3E%3C/svg%3E">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+    
+    :root {
+      --black: #0F0F0F;
+      --gold: #D4AF37;
+      --cream: #FAF7F0;
+      --dark: #0B2A1F;
+    }
+    
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
 
-  <main id="home">
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Fresh • Healthy • Affordable</p>
-        <h1>Quality poultry products raised with modern care.</h1>
-        <p class="hero-text">
-          NextGen Poultry Farm supplies fresh eggs, broilers, layers, chicks, and farm support services for homes, hotels, shops, and institutions.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#products">View Products</a>
-          <a class="btn btn-secondary" href="#contact">Contact Farm</a>
+    .section {
+      scroll-margin-top: 80px;
+    }
+
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #D4AF37;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .bird-card {
+      transition: none;
+    }
+
+    .gold-btn {
+      background: #D4AF37;
+      color: #0F0F0F;
+      font-weight: 600;
+    }
+
+    .gold-btn:hover {
+      background: #C5A227;
+    }
+
+    .outline-btn {
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+    }
+
+    .outline-btn:hover {
+      background: #D4AF37;
+      color: #0F0F0F;
+    }
+
+    .bird-img {
+      transition: none;
+    }
+
+    .stat {
+      border-left: 3px solid #D4AF37;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF7F0] text-[#1F1F1F]">
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-[#FAF7F0]/95 border-b border-[#E5E0D5]">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-[#0F0F0F] rounded-xl flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="12" fill="#0F0F0F"/>
+            <path d="M30 65 Q50 25 70 65" fill="none" stroke="#D4AF37" stroke-width="9"/>
+            <circle cx="50" cy="55" r="8" fill="#D4AF37"/>
+          </svg>
         </div>
-        <div class="stats" aria-label="Farm highlights">
-          <div><strong>100%</strong><span>Fresh Supply</span></div>
-          <div><strong>24/7</strong><span>Farm Care</span></div>
-          <div><strong>Bulk</strong><span>Orders Welcome</span></div>
+        <div>
+          <div class="font-semibold tracking-tight text-xl">NextGen</div>
+          <div class="text-[10px] text-[#6B6B6B] -mt-1">ORNAMENTAL FARM</div>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="sun"></div>
-        <div class="coop">
-          <div class="roof"></div>
-          <div class="house">
-            <span>🐓</span>
-            <span>🥚</span>
-            <span>🐣</span>
+
+      <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+        <a href="#breeds" class="nav-link text-[#3D3D3D] hover:text-[#0F0F0F]">Breeds</a>
+        <a href="#gallery" class="nav-link text-[#3D3D3D] hover:text-[#0F0F0F]">Gallery</a>
+        <a href="#about" class="nav-link text-[#3D3D3D] hover:text-[#0F0F0F]">Our Approach</a>
+        <a href="#contact" class="nav-link text-[#3D3D3D] hover:text-[#0F0F0F]">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/254722481199" target="_blank"
+           class="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-2xl border border-[#D4AF37] text-[#D4AF37] text-sm font-semibold hover:bg-[#D4AF37] hover:text-[#0F0F0F]">
+          <span>WhatsApp</span>
+        </a>
+        <a href="tel:+254722481199"
+           class="gold-btn px-6 py-2.5 rounded-2xl text-sm flex items-center gap-2">
+          <span class="hidden md:inline">Call</span>
+          <span>0722 481 199</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="max-w-7xl mx-auto px-6 pt-16 pb-20">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-7">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-3xl bg-[#0F0F0F] text-[#D4AF37] text-xs tracking-[3px] font-medium mb-6">
+          EST. 2018 • KENYA
+        </div>
+        
+        <h1 class="heading-serif text-6xl md:text-7xl leading-[0.95] tracking-[-3.5px] text-[#0F0F0F]">
+          Exquisite<br>ornamental birds.<br>Exceptional genetics.
+        </h1>
+        
+        <p class="mt-6 max-w-lg text-xl text-[#4A4A4A]">
+          Premium show-quality and breeding stock for collectors, 
+          breeders and farms across East Africa.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-9">
+          <a href="#breeds" 
+             class="gold-btn px-8 py-4 rounded-3xl text-base flex items-center gap-3">
+            Explore Our Birds
+          </a>
+          <a href="https://wa.me/254722481199?text=Hello%20NextGen%20Ornamental%20Farm%2C%20I%27m%20interested%20in%20your%20birds." target="_blank"
+             class="outline-btn px-8 py-4 rounded-3xl text-base flex items-center gap-3 font-semibold">
+            Enquire via WhatsApp
+          </a>
+        </div>
+
+        <div class="flex items-center gap-8 mt-12 text-sm">
+          <div>
+            <div class="font-semibold text-[#0F0F0F]">120+</div>
+            <div class="text-[#6B6B6B]">Birds placed in 2025</div>
+          </div>
+          <div>
+            <div class="font-semibold text-[#0F0F0F]">18</div>
+            <div class="text-[#6B6B6B]">Award-winning bloodlines</div>
+          </div>
+          <div>
+            <div class="font-semibold text-[#0F0F0F]">4</div>
+            <div class="text-[#6B6B6B]">Countries supplied</div>
           </div>
         </div>
-        <div class="grass"></div>
       </div>
-    </section>
 
-    <section id="about" class="section split">
+      <div class="md:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden shadow-xl border border-[#E5E0D5]">
+          <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1200&q=80" 
+               alt="Magnificent peacock displaying full tail at NextGen Ornamental Farm" 
+               class="w-full aspect-[4/3] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/40"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <div class="text-xs tracking-widest opacity-75">FEATURED BLOODLINE</div>
+            <div class="text-2xl font-semibold tracking-tight">Congo Peacock • 2024 Champion</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREEDS -->
+  <section id="breeds" class="max-w-7xl mx-auto px-6 pb-20">
+    <div class="flex justify-between items-end mb-8">
       <div>
-        <p class="eyebrow">About Us</p>
-        <h2>Smart farming for better poultry production.</h2>
+        <div class="uppercase text-xs tracking-[3px] text-[#6B6B6B] font-medium">Signature Bloodlines</div>
+        <h2 class="heading-serif text-5xl tracking-[-2px] text-[#0F0F0F]">Our Birds</h2>
       </div>
-      <p>
-        We are a customer-focused poultry farm committed to producing healthy birds and fresh eggs through proper feeding, hygiene, vaccination, and modern farm management. Our goal is to deliver dependable poultry products at fair prices.
-      </p>
-    </section>
+      <a href="https://wa.me/254722481199" target="_blank" class="hidden md:block text-sm font-semibold text-[#D4AF37] hover:underline">View full price list →</a>
+    </div>
 
-    <section id="products" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Our Products</p>
-        <h2>What we supply</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Breed 1 -->
+      <div class="bird-card bg-white border border-[#E5E0D5] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=900&q=80" 
+             alt="Premium Silkie rooster with distinctive fluffy plumage at NextGen Ornamental Farm" 
+             class="w-full h-64 object-cover bird-img" loading="lazy">
+        <div class="p-7">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-semibold text-xl tracking-tight">Silkie Bantam</div>
+              <div class="text-[#6B6B6B] text-sm">Black, White & Blue varieties</div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-[#6B6B6B]">From</div>
+              <div class="font-semibold text-[#D4AF37]">KSh 8,500</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-[#4A4A4A]">Soft, fur-like feathers. Calm temperament. Excellent for showing and as pets. Strong genetic lines from champion stock.</p>
+          <a href="https://wa.me/254722481199?text=Hi%2C%20I%27m%20interested%20in%20Silkie%20Bantams" target="_blank" 
+             class="mt-5 inline-block text-sm font-semibold text-[#D4AF37] hover:underline">Enquire availability →</a>
+        </div>
       </div>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">🥚</div>
-          <h3>Fresh Eggs</h3>
-          <p>Clean, carefully collected eggs available in trays for homes, shops, bakeries, and restaurants.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">🐔</div>
-          <h3>Broiler Chicken</h3>
-          <p>Healthy meat birds raised for quality, weight, and freshness. Available for retail or bulk purchase.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">🐥</div>
-          <h3>Chicks & Layers</h3>
-          <p>Strong chicks and productive layers for farmers starting or expanding poultry projects.</p>
-        </article>
-      </div>
-    </section>
 
-    <section id="services" class="section services">
-      <div class="section-heading">
-        <p class="eyebrow">Services</p>
-        <h2>More than just poultry</h2>
+      <!-- Breed 2 -->
+      <div class="bird-card bg-white border border-[#E5E0D5] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=900&q=80" 
+             alt="Striking Polish crested chicken with elaborate head feathers at NextGen Ornamental Farm" 
+             class="w-full h-64 object-cover bird-img" loading="lazy">
+        <div class="p-7">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-semibold text-xl tracking-tight">Polish Crested</div>
+              <div class="text-[#6B6B6B] text-sm">Gold, Silver & White laced</div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-[#6B6B6B]">From</div>
+              <div class="font-semibold text-[#D4AF37]">KSh 12,000</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-[#4A4A4A]">Iconic crest and beard. Active, friendly, and highly ornamental. Multiple award-winning bloodlines available.</p>
+          <a href="https://wa.me/254722481199?text=Hi%2C%20I%27m%20interested%20in%20Polish%20Crested" target="_blank" 
+             class="mt-5 inline-block text-sm font-semibold text-[#D4AF37] hover:underline">Enquire availability →</a>
+        </div>
       </div>
-      <div class="service-list">
-        <div><span>✓</span> Poultry farm consultation</div>
-        <div><span>✓</span> Bulk egg and chicken supply</div>
-        <div><span>✓</span> Farm setup guidance</div>
-        <div><span>✓</span> Feed and bird management advice</div>
-      </div>
-    </section>
 
-    <section class="section testimonial">
-      <p>“Fresh eggs, healthy birds, and reliable delivery — NextGen Poultry Farm is built for dependable supply.”</p>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div>
-        <p class="eyebrow">Get In Touch</p>
-        <h2>Place an order or ask a question.</h2>
-        <p>Call, WhatsApp, or email us for fresh eggs, broilers, chicks, and poultry guidance.</p>
+      <!-- Breed 3 -->
+      <div class="bird-card bg-white border border-[#E5E0D5] rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=900&q=80" 
+             alt="Elegant Golden Pheasant with vibrant plumage at NextGen Ornamental Farm" 
+             class="w-full h-64 object-cover bird-img" loading="lazy">
+        <div class="p-7">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-semibold text-xl tracking-tight">Golden Pheasant</div>
+              <div class="text-[#6B6B6B] text-sm">Pure & Mutant lines</div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-[#6B6B6B]">From</div>
+              <div class="font-semibold text-[#D4AF37]">KSh 15,500</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-[#4A4A4A]">Stunning plumage and graceful movement. Hardy and excellent for aviary collections. Limited pairs available.</p>
+          <a href="https://wa.me/254722481199?text=Hi%2C%20I%27m%20interested%20in%20Golden%20Pheasant" target="_blank" 
+             class="mt-5 inline-block text-sm font-semibold text-[#D4AF37] hover:underline">Enquire availability →</a>
+        </div>
       </div>
-      <div class="contact-card">
-        <p><strong>Phone/WhatsApp:</strong> +254 XXX XXX XXX</p>
-        <p><strong>Email:</strong> nextgenpoultry@example.com</p>
-        <p><strong>Location:</strong> Your Town, Kenya</p>
-        <a class="btn btn-primary" href="mailto:nextgenpoultry@example.com">Email Us</a>
-      </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>© 2026 NextGen Poultry Farm. Fresh poultry, modern farming.</p>
+    <div class="mt-6 text-center">
+      <a href="https://wa.me/254722481199?text=Hello%20NextGen%2C%20please%20send%20your%20current%20ornamental%20bird%20availability%20and%20price%20list" target="_blank"
+         class="inline-flex items-center text-sm font-semibold text-[#D4AF37] hover:underline">
+        Request full breed & pricing catalogue →
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="bg-[#0F0F0F] py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex justify-between items-end mb-8">
+        <div>
+          <div class="text-[#D4AF37] text-xs tracking-[3px] font-medium">IN THE AVIARY</div>
+          <h3 class="heading-serif text-4xl text-white tracking-[-1.5px]">Recent highlights</h3>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="overflow-hidden rounded-3xl"><img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80" alt="Peacock in full display" class="w-full h-full object-cover aspect-square" loading="lazy"></div>
+        <div class="overflow-hidden rounded-3xl"><img src="https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=800&q=80" alt="Silkie flock in natural setting" class="w-full h-full object-cover aspect-square" loading="lazy"></div>
+        <div class="overflow-hidden rounded-3xl"><img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&q=80" alt="Polish crested hen close-up" class="w-full h-full object-cover aspect-square" loading="lazy"></div>
+        <div class="overflow-hidden rounded-3xl"><img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800&q=80" alt="Golden pheasant pair" class="w-full h-full object-cover aspect-square" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-12 gap-x-12 gap-y-12">
+      <div class="md:col-span-5">
+        <div class="sticky top-24">
+          <div class="text-xs tracking-[3px] text-[#6B6B6B]">OUR STANDARD</div>
+          <h2 class="heading-serif text-5xl tracking-[-2px] mt-2">Selective.<br>Healthy.<br>Documented.</h2>
+        </div>
+      </div>
+      
+      <div class="md:col-span-7 space-y-10 text-lg text-[#3D3D3D]">
+        <div class="flex gap-6">
+          <div class="w-8 h-8 rounded-2xl bg-[#D4AF37] flex-shrink-0 flex items-center justify-center text-[#0F0F0F] font-bold text-sm">01</div>
+          <div>
+            <div class="font-semibold text-[#0F0F0F]">Genetic documentation</div>
+            <p class="mt-2 text-base">Every bird comes with full parentage, vaccination records, and performance notes from our closed flock.</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <div class="w-8 h-8 rounded-2xl bg-[#D4AF37] flex-shrink-0 flex items-center justify-center text-[#0F0F0F] font-bold text-sm">02</div>
+          <div>
+            <div class="font-semibold text-[#0F0F0F]">Biosecurity first</div>
+            <p class="mt-2 text-base">Strict all-in-all-out protocols, regular testing, and isolated quarantine facilities for every new arrival.</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <div class="w-8 h-8 rounded-2xl bg-[#D4AF37] flex-shrink-0 flex items-center justify-center text-[#0F0F0F] font-bold text-sm">03</div>
+          <div>
+            <div class="font-semibold text-[#0F0F0F]">Show & breeding focus</div>
+            <p class="mt-2 text-base">We select only birds that meet international show standards while maintaining strong fertility and mothering ability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-white border-t border-[#E5E0D5]">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-2 gap-16">
+        <div>
+          <div class="text-xs tracking-[3px] text-[#6B6B6B]">NEXT STEPS</div>
+          <h2 class="heading-serif text-5xl tracking-[-2px] mt-3">Ready to add<br>exceptional birds<br>to your collection?</h2>
+          
+          <div class="mt-10 space-y-6 text-sm">
+            <div class="flex gap-4">
+              <div class="font-semibold w-20 text-[#6B6B6B]">Phone</div>
+              <a href="tel:+254722481199" class="font-medium">+254 722 481 199</a>
+            </div>
+            <div class="flex gap-4">
+              <div class="font-semibold w-20 text-[#6B6B6B]">WhatsApp</div>
+              <a href="https://wa.me/254722481199" target="_blank" class="font-medium text-[#D4AF37]">Message us directly</a>
+            </div>
+            <div class="flex gap-4">
+              <div class="font-semibold w-20 text-[#6B6B6B]">Email</div>
+              <a href="mailto:info@nextgenornamental.co.ke" class="font-medium">info@nextgenornamental.co.ke</a>
+            </div>
+            <div class="flex gap-4">
+              <div class="font-semibold w-20 text-[#6B6B6B]">Location</div>
+              <div class="font-medium">Kisii, Kenya</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF7F0] rounded-3xl p-9 border border-[#E5E0D5]">
+          <div class="text-sm font-semibold mb-6">Quick enquiry</div>
+          
+          <form action="https://wa.me/254722481199" method="get" class="space-y-5">
+            <div>
+              <label class="text-xs text-[#6B6B6B]">Your name</label>
+              <input type="text" class="mt-1.5 w-full bg-white border border-[#D4D0C5] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#D4AF37]" placeholder="Jane Doe" required>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs text-[#6B6B6B]">Phone / WhatsApp</label>
+                <input type="tel" class="mt-1.5 w-full bg-white border border-[#D4D0C5] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#D4AF37]" placeholder="+254 7XX XXX XXX" required>
+              </div>
+              <div>
+                <label class="text-xs text-[#6B6B6B]">Preferred breed</label>
+                <input type="text" class="mt-1.5 w-full bg-white border border-[#D4D0C5] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#D4AF37]" placeholder="Silkie / Polish / Pheasant">
+              </div>
+            </div>
+            <a href="https://wa.me/254722481199?text=Hello%20NextGen%20Ornamental%20Farm%2C%20I%27m%20interested%20in%20your%20birds." target="_blank"
+               class="block w-full text-center gold-btn py-4 rounded-3xl text-sm font-semibold mt-2">
+              Send enquiry on WhatsApp
+            </a>
+            <p class="text-[10px] text-center text-[#6B6B6B]">We usually reply within 2 hours during business hours.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-[#E5E0D5] py-8 text-xs text-[#6B6B6B]">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-y-3 text-center md:text-left">
+      <div>© 2026 NextGen Ornamental Farm. All rights reserved.</div>
+      <div>Designed & maintained by Ong'era Mohammed</div>
+      <div class="hidden md:block">Kisii, Kenya • +254 722 481 199</div>
+    </div>
   </footer>
+
+  <script>
+    function initializeTailwind() {
+      document.documentElement.style.setProperty('--accent', '#D4AF37');
+    }
+    window.onload = initializeTailwind;
+  </script>
 </body>
 </html>

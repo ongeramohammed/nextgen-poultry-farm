@@ -1,30 +1,32 @@
-# NextGen Poultry Farm Website
+# NextGen Ornamental Farm
 
-A simple responsive one-page website for a poultry farm.
+Professional single-page website for NextGen Ornamental Farm — premium ornamental birds and show-quality breeding stock.
 
-## Files
+**Live site:** https://ongeramohammed.github.io/nextgen-poultry-farm/
 
-- `index.html` — website content
-- `style.css` — design and responsive styling
+## Features
+- Black & gold premium palette
+- Realistic high-quality photos of ornamental birds (peacocks, Silkies, Polish, pheasants)
+- Fully responsive (mobile-first, tested on phone/tablet/desktop)
+- No animations or motion effects
+- Direct WhatsApp & phone CTAs (0722 481 199)
+- Revenue-focused enquiry flow
+- Clean typography with Playfair Display headings
+- Optimized for fast loading and Google indexing
 
-## How to open
+## Brand
+- **Name:** NextGen Ornamental Farm
+- **Phone/WhatsApp:** +254 722 481 199
+- **Location:** Kisii, Kenya
+- **Developer:** Ong'era Mohammed
 
-Double-click `index.html` in a browser.
+## Tech
+- Tailwind CSS (CDN)
+- Semantic HTML5
+- Static (GitHub Pages ready)
 
-## How to edit
+## Local preview
+Open `index.html` in any browser.
 
-Open `index.html` in any text editor and replace:
-
-- Phone/WhatsApp number
-- Email address
-- Location
-- Product descriptions if needed
-
-## Sections included
-
-- Home / hero
-- About
-- Products
-- Services
-- Testimonial
-- Contact
+## Deployment
+Pushed to `main` branch → GitHub Pages auto-deploys.
